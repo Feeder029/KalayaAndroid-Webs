@@ -15,7 +15,7 @@ function closeDownloadModal() {
 
 function downloadVulkan() {
     const fileId = '1oAkT0qn4C3V-IrdB7-hpx3AA9-KGwvzo';
-    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    const downloadUrl = `https://github.com/Feeder029/KalayaAndroid-Webs/releases/download/v1.0/KalayaAndoid.Vulkan.apk`;
     window.open(downloadUrl, '_blank');
 }
 
