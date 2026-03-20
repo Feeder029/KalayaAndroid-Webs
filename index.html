@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katipunan Game - Landing Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="img/KKK LOGO.png" alt="Game Logo">
+        </div>
+        <div class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#characters">Characters</a>
+            <a href="#journey">Journey</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#devs">Devs</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>KalayaAndroid</h1>
+            <p>Join the secret society that sparked a revolution. Unite with the Katipunan and fight for Philippine independence.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Watch Cinematic</button>
+                <button class="btn-secondary" onclick="openAuthModal()">Join the Katipunan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Roles Section -->
+    <section class="section" id="characters">
+        <h2 class="section-title">Who Will You Become?</h2>
+        <p class="section-subtitle">Experience history through the eyes of forgotten heroes</p>
+        
+        <div class="note">NOTE: Each character offers distinct gameplay experiences across different historical periods.</div>
+
+        <div class="roles-grid">
+            <div class="role-card">
+                <div class="role-icon">
+                    <img src="img/HIRAYA.png" alt="Hiraya">
+                </div>
+                <h3>Hiraya (The Time Bearer)</h3>
+                <p class="short-desc">Experience history through the eyes of forgotten heroes. Guided by mysterious spirits, Hiraya travels across different eras...</p>
+                <p class="full-desc">Experience history through the eyes of forgotten heroes. Guided by mysterious spirits, Hiraya travels across different eras to correct regrets left behind by those who fought for freedom. Through courage and learning, she discovers the true meaning of sacrifice, responsibility, and patriotism.</p>
+                <button class="btn-read-more" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">
+                    <img src="img/AMADO.png" alt="Amado Mabunga">
+                </div>
+                <h3>Amado Mabunga – The Young Katipunero</h3>
+                <p class="short-desc">Witness the birth of the Katipunan as a young revolutionary eager to serve the cause. Deliver secret messages...</p>
+                <p class="full-desc">Witness the birth of the Katipunan as a young revolutionary eager to serve the cause. Deliver secret messages, assist fellow members, and survive encounters with Spanish authorities while learning the fundamentals of combat and stealth. Prove your loyalty and earn your place among the revolutionaries.</p>
+                <button class="btn-read-more" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">
+                    <img src="img/ALONDRA.png" alt="Alondra Dimaculangan">
+                </div>
+                <h3>Alondra Dimaculangan – The Silent Informant</h3>
+                <p class="short-desc">Move through danger as a determined revolutionary trying to prevent the exposure of the Katipunan...</p>
+                <p class="full-desc">Move through danger as a determined revolutionary trying to prevent the exposure of the Katipunan. Gather intelligence, recruit allies, and secretly influence events leading to the Cry of Pugad Lawin. Use strategy and persuasion to strengthen the growing resistance.</p>
+                <button class="btn-read-more" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">ICON<br>PLACEHOLDER</div>
+                <h3>Mang Bernardo – The Veteran Fighter</h3>
+                <p class="short-desc">Fight in the frontlines as an aging warrior determined to prove that courage has no limits...</p>
+                <p class="full-desc">Fight in the frontlines as an aging warrior determined to prove that courage has no limits. Lead assaults against Spanish strongholds, secure vital war supplies, and survive intense battlefield encounters. Your strength and resilience will help shape the revolution's early battles.</p>
+                <button class="btn-read-more" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">
+                    <img src="img/RICARDO.png" alt="Ricardo">
+                </div>
+                <h3>Ricardo – The Reluctant Witness</h3>
+                <p class="short-desc">Navigate Fort Santiago as a civilian caught in one of history's most tragic moments...</p>
+                <p class="full-desc">Navigate Fort Santiago as a civilian caught in one of history's most tragic moments. Solve puzzles, infiltrate restricted areas, and recover Rizal's final writings while avoiding detection. Learn that bravery sometimes means honoring sacrifice rather than changing fate.</p>
+                <button class="btn-read-more" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">
+                    <img src="img/MIGUEL.png" alt="Ricardo">
+                </div>
+                <h3>Miguel Salamat – The Divided Revolutionary</h3>
+                <p class="short-desc">Witness the internal conflicts that threaten to destroy the revolution from within...</p>
+                <p class="full-desc">Witness the internal conflicts that threaten to destroy the revolution from within. Protect Bonifacio, uncover spies, and survive faction battles during the Tejeros Convention and its aftermath. Balance loyalty and survival as political betrayal unfolds around you.</p>
+                <button class="btn-read-more" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">
+                    <img src="img/PEDRO.png" alt="Ricardo">
+                </div>
+                <h3>Pedro Makabuhay – The Loyal Provider</h3>
+                <p class="short-desc">Support the revolution by securing resources and defending safe zones in Biak-na-Bato...</p>
+                <p class="full-desc">Support the revolution by securing resources and defending safe zones in Biak-na-Bato. Gather supplies, assist civilians, and raid enemy bases while questioning decisions that could end the revolution prematurely. Your perseverance keeps hope alive during uncertain times.</p>
+                <button class="btn-read-more" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">
+                    <img src="img/JUANA.png" alt="Ricardo">
+                </div>
+                <h3>Juana Cruz – The Final Freedom Fighter</h3>
+                <p class="short-desc">Join the final push toward independence as a revolutionary soldier under Aguinaldo's command...</p>
+                <p class="full-desc">Join the final push toward independence as a revolutionary soldier under Aguinaldo's command. Free prisoners, sabotage enemy forces, and participate in decisive battles leading to the declaration of Philippine independence. Witness the victory that defines a nation's future.</p>
+                <button class="btn-read-more" onclick="toggleDescription(this)">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="roadmap-bg" id="journey">
+        <div class="section">
+            <h2 class="section-title">Journey Through History</h2>
+            <p class="section-subtitle">Major story arcs and historical milestones</p>
+            
+            <div class="note">NOTE: Each milestone represents a major game chapter tied to historical events.</div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Act I: Formation of the Katipunan (1892–1896)</h3>
+                    <p><strong>Historical Context:</strong> The Katipunan was founded on July 7, 1892 by Andrés Bonifacio and fellow revolutionaries as a secret society aiming to gain independence from Spanish colonial rule. Members recruited allies, spread revolutionary ideals, and organized resistance in secrecy.</p>
+                    <p><strong>Play as Amado Mabunga:</strong> Witness the founding of the secret society. Join the organization, deliver secret messages, and assist fellow members while avoiding the Guardia Civil. Through rescue and stealth missions, prove your loyalty and participate in the sacred initiation ritual. Unlock stealth abilities as you embrace the revolutionary cause.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Act II: The Cry of Pugad Lawin (1896)</h3>
+                    <p><strong>Historical Context:</strong> The Cry of Pugad Lawin marked the open declaration of revolution against Spanish rule, symbolized by Katipuneros tearing their cedulas as an act of defiance. This event signaled the beginning of armed resistance in 1896.</p>
+                    <p><strong>Play as Alondra Dimaculangan:</strong> Experience the moment that changed history. Gather intelligence, recruit members, and strengthen revolutionary forces. Lead up to the historic act of defiance as Katipuneros tear their cedulas, declaring open war against Spanish colonial rule. Unlock powerful combat skills as the revolution officially begins.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Act III: Battle of San Juan del Monte (1896–1897)</h3>
+                    <p><strong>Historical Context:</strong> The Battle of San Juan del Monte was one of the first major battles of the Philippine Revolution, where Katipuneros attempted to capture El Polvorín, a Spanish gunpowder depot. Although initially successful, Spanish reinforcements forced the revolutionaries to retreat.</p>
+                    <p><strong>Play as Mang Bernardo:</strong> Fight in one of the first major battles of the revolution. Lead assaults against Spanish forces, capture El Polvorín gunpowder depot, and secure crucial war supplies. Face overwhelming enemy reinforcements and make strategic retreats while preserving resources. Learn the cost of sacrifice and gain regenerative survival abilities.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Act IV: The Execution of José Rizal (1896)</h3>
+                    <p><strong>Historical Context:</strong> Dr. José Rizal, a nationalist reformist and intellectual, was executed by the Spanish colonial government on December 30, 1896 in Bagumbayan (now Rizal Park). His execution intensified Filipino resistance and inspired many revolutionaries.</p>
+                    <p><strong>Play as Ricardo:</strong> Attempt the impossible to save a national hero. Infiltrate Fort Santiago, solve intricate puzzles, and retrieve Rizal's final writings. Despite your efforts to rescue him, witness Rizal's choice to face his fate for the nation on December 30, 1896. His martyrdom ignites the revolutionary spirit and grants you enhanced escape mobility.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Act V: The Tejeros Convention & Bonifacio's Downfall (1897)</h3>
+                    <p><strong>Historical Context:</strong> The Tejeros Convention was held to establish a revolutionary government but resulted in political division between factions. The conflict eventually led to the arrest and execution of Andrés Bonifacio.</p>
+                    <p><strong>Play as Miguel Salamat:</strong> Navigate the dangerous political divisions within the revolution. Prepare crucial meetings, prevent espionage, and attempt to defend Andrés Bonifacio from opposing factions. Experience the heartbreak of internal conflict as betrayal leads to Bonifacio's tragic execution. Unlock high-risk, high-reward combat abilities born from this painful lesson.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Act VI: The Pact of Biak-na-Bato (1897)</h3>
+                    <p><strong>Historical Context:</strong> The Pact of Biak-na-Bato was a truce agreement between Spanish authorities and revolutionary leaders, temporarily ending hostilities. Revolutionary leaders agreed to exile in exchange for financial compensation and promised reforms.</p>
+                    <p><strong>Play as Pedro Makabuhay:</strong> Question difficult decisions as revolutionary leaders negotiate truce with Spanish authorities. Help revolutionaries survive in Biak-na-Bato, gather resources, assist civilians, and raid enemy outposts. Struggle between continuing the fight or accepting temporary peace and exile. Gain defensive survival enhancements through resilience.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Act VII: The Return & Philippine Independence (1898)</h3>
+                    <p><strong>Historical Context:</strong> In 1898, Emilio Aguinaldo returned from exile and led Filipino forces to victory against Spanish rule, culminating in the Declaration of Philippine Independence on June 12, 1898 in Kawit, Cavite. This event marked the formal proclamation of Philippine sovereignty.</p>
+                    <p><strong>Play as Juan Cruz:</strong> Witness history's triumphant moment as Emilio Aguinaldo returns from exile. Lead final military campaigns against Spanish forces—free prisoners, sabotage enemy supplies, and defeat Spanish commanders. Experience the Declaration of Philippine Independence on June 12, 1898 in Kawit, Cavite. Return to the present with a deeper understanding of sacrifice, freedom, and national identity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section class="section" id="gallery">
+        <h2 class="section-title">Experience the Revolution</h2>
+        <p class="section-subtitle">Screenshots, concept art, and cinematic trailers</p>
+        
+        <div class="note">NOTE: Click any item to view in fullscreen. Use arrows to navigate between images.</div>
+
+        <div class="media-grid">
+            <div class="media-item" onclick="openGallery(0)">
+                <img src="img/FORMATION.png" alt="Formation">
+            </div>
+            <div class="media-item" onclick="openGallery(1)">
+                <img src="img/PUGAD LAWIN.png" alt="Pugad Lawin">
+            </div>
+            <div class="media-item" onclick="openGallery(2)">
+                <img src="img/SJDM.png" alt="San Juan del Monte">
+            </div>
+            <div class="media-item" onclick="openGallery(3)">
+                <img src="img/RIZAL EXE.png" alt="Rizal Execution">
+            </div>
+            <div class="media-item" onclick="openGallery(4)">
+                <img src="img/TEJEROS.png" alt="Tejeros">
+            </div>
+            <div class="media-item" onclick="openGallery(5)">
+                <img src="img/BONIFACIO DOWNFALL.png" alt="Bonifacio Downfall">
+            </div>
+            <div class="media-item" onclick="openGallery(6)">
+                <img src="img/PACK BIAK NA BATO.png" alt="Pact of Biak-na-Bato">
+            </div>
+            <div class="media-item" onclick="openGallery(7)">
+                <img src="img/EXILE_RETURN.png" alt="Exile Return">
+            </div>
+            <div class="media-item" onclick="openGallery(8)">
+                <img src="img/INDEPENDENCE.png" alt="Independence">
+            </div>
+        </div>
+    </section>
+
+    <!-- Developers Section -->
+    <section class="developers-bg" id="devs">
+        <div class="section">
+            <h2 class="section-title">Meet the Team</h2>
+            <p class="section-subtitle">The passionate individuals bringing this historical journey to life</p>
+            
+            <div class="team-container">
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="img/JARENCIO.jpg" alt="Project Manager/Lead Developer">
+                        </div>
+                        <h3 class="team-name">Alexis Jake B. Jarencio</h3>
+                        <p class="team-role">Project Manager & Developer</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="img/MACASPAC.jpg" alt="Gameplay Programmer">
+                        </div>
+                        <h3 class="team-name">Mark Reven Macaspac</h3>
+                        <p class="team-role">Lead Developer</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="img/LAGMAN.jpg" alt="Game Artist & UI/UX Designer">
+                        </div>
+                        <h3 class="team-name">John Rico Lagman</h3>
+                        <p class="team-role">Game Artist & UI/UX Designer</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="img/FORMAL ATTIRE_SILVERIO.png" alt="Game Artist & QA Tester">
+                        </div>
+                        <h3 class="team-name">John Edward F. Silverio</h3>
+                        <p class="team-role">Game Artist & QA Tester</p>
+                    </div>
+                </div>
+
+                <div class="adviser-section">
+                    <h3 class="adviser-title">Project Adviser</h3>
+                    <div class="team-card adviser-card">
+                        <div class="team-photo">
+                            <img src="img/adviser.jpg" alt="Adviser">
+                        </div>
+                        <h3 class="team-name">Crono Bane</h3>
+                        <p class="team-role">Project Adviser</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authentication Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-content">
+            <button class="auth-close" onclick="closeAuthModal()">&times;</button>
+            
+            <!-- Sign In Form -->
+            <div class="auth-form" id="signInForm">
+                <div class="auth-header">
+                    <h2>Join the Revolution</h2>
+                    <p>Sign in to download the game</p>
+                </div>
+                
+                <form onsubmit="handleSignIn(event)">
+                    <div class="form-group">
+                        <label for="signInEmail">Email Address</label>
+                        <input type="email" id="signInEmail" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signInPassword">Password</label>
+                        <input type="password" id="signInPassword" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn primary">Sign In</button>
+                    
+                    <div class="auth-switch">
+                        <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Sign Up Form -->
+            <div class="auth-form" id="signUpForm" style="display: none;">
+                <div class="auth-header">
+                    <h2>Create Your Account</h2>
+                    <p>Join the Katipunan and fight for freedom</p>
+                </div>
+                
+                <form onsubmit="handleSignUp(event)">
+                    <div class="form-group">
+                        <label for="signUpName">Full Name</label>
+                        <input type="text" id="signUpName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signUpEmail">Email Address</label>
+                        <input type="email" id="signUpEmail" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signUpPassword">Password</label>
+                        <input type="password" id="signUpPassword" placeholder="Create a password" required minlength="8">
+                        <small class="form-hint">At least 8 characters</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signUpConfirmPassword">Confirm Password</label>
+                        <input type="password" id="signUpConfirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <span>I agree to the <a href="#" class="terms-link">Terms & Conditions</a></span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn primary">Create Account</button>
+                    
+                    <div class="auth-switch">
+                        <p>Already have an account? <a href="#" onclick="showSignIn()">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Modal -->
+    <div class="download-modal" id="downloadModal">
+        <div class="download-modal-content">
+            <div class="download-modal-header">
+                <h2>Download Game</h2>
+                <button class="download-close" onclick="closeDownloadModal()">&times;</button>
+            </div>
+            <div class="download-modal-body">
+                <div class="specs-column">
+                    <h3>Minimum System Requirements</h3>
+                    <ul class="specs-list">
+                        <li>
+                            <span class="spec-label">OS:</span>
+                            <span class="spec-value">Android 8.0+</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">RAM:</span>
+                            <span class="spec-value">4 GB</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Storage:</span>
+                            <span class="spec-value">2 GB available</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">GPU:</span>
+                            <span class="spec-value">Vulkan or OpenGL ES 3.0+</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Processor:</span>
+                            <span class="spec-value">Snapdragon 660 or equivalent</span>
+                        </li>
+                    </ul>
+                    <h3 style="margin-top: 2rem;">Recommended</h3>
+                    <ul class="specs-list">
+                        <li>
+                            <span class="spec-label">OS:</span>
+                            <span class="spec-value">Android 12+</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">RAM:</span>
+                            <span class="spec-value">6 GB or more</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Storage:</span>
+                            <span class="spec-value">4 GB available</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">GPU:</span>
+                            <span class="spec-value">Vulkan 1.1+</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Processor:</span>
+                            <span class="spec-value">Snapdragon 600 Series or higher</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="download-column">
+                    <h3>Choose Your Version</h3>
+                    <button class="download-btn" onclick="downloadVulkan()">
+                        Download Vulkan Version
+                        <div style="font-size: 12px; margin-top: 5px; font-weight: normal;">Recommended for newer devices</div>
+                    </button>
+                    <button class="download-btn secondary" onclick="downloadOpenGL()">
+                        Download OpenGL Version
+                        <div style="font-size: 12px; margin-top: 5px; font-weight: normal;">For older/compatible devices</div>
+                    </button>
+                    <p class="download-note">Not sure which version? Download the Vulkan version first. If it doesn't work, try OpenGL.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <button class="modal-close" onclick="closeGallery()">&times;</button>
+        <button class="modal-nav modal-prev" onclick="changeGalleryImage(-1)">&#10094;</button>
+        <div class="modal-content" id="modalContent">
+            <span style="font-size: 14px; color: #666;">GALLERY IMAGE<br>PLACEHOLDER</span>
+        </div>
+        <button class="modal-nav modal-next" onclick="changeGalleryImage(1)">&#10095;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="img/KKK LOGO.png" alt="Game Logo">
+                </div>
+                <p style="font-size: 14px; line-height: 1.6;">A historical narrative RPG honoring the brave men and women who fought for Philippine independence.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#characters">Characters</a>
+                <a href="#journey">Journey</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#devs">Devs</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Community</h4>
+                <a href="#">Discord</a>
+                <a href="#">Forums</a>
+                <a href="#">Media Kit</a>
+                <a href="#">Support</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="#">Historical Sources</a>
+                <a href="#">Educational Materials</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2024 Katipunan Game. All rights reserved. | Created to honor Philippine history and the heroes of the revolution.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
