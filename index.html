@@ -23,16 +23,20 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>KalayaAndroid</h1>
-            <p>Join the secret society that sparked a revolution. Unite with the Katipunan and fight for Philippine independence.</p>
-            <div class="hero-buttons">
-                <button class="btn-primary">Watch Cinematic</button>
-                <button class="btn-secondary" onclick="openAuthModal()">Join the Katipunan</button>
+        <section class="hero" id="home">
+            <iframe id="cinematicVideo" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;border:none;z-index:0;" allowfullscreen allow="autoplay"></iframe>
+            <div class="hero-content" id="heroContent">
+                <h1>KalayaAndroid</h1>
+                <p>Join the secret society that sparked a revolution. Unite with the Katipunan and fight for Philippine independence.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="openVideo()">Watch Cinematic</button>
+                    <button class="btn-secondary" onclick="openAuthModal()">Join the Katipunan</button>
+                </div>
             </div>
-        </div>
-    </section>
+
+            <!-- Close button (hidden by default) -->
+            <button id="closeVideo" onclick="closeVideo()" style="display:none;position:absolute;top:20px;right:25px;font-size:40px;color:#fff;background:none;border:none;cursor:pointer;z-index:10;">&times;</button>
+        </section>
 
     <!-- Character Roles Section -->
     <section class="section" id="characters">
@@ -261,7 +265,7 @@
                         <div class="team-photo">
                             <img src="img/adviser.jpg" alt="Adviser">
                         </div>
-                        <h3 class="team-name">Crono Bane</h3>
+                        <h3 class="team-name">Florante Pangilinan</h3>
                         <p class="team-role">Project Adviser</p>
                     </div>
                 </div>

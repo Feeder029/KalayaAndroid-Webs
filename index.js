@@ -132,4 +132,21 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+function openVideo() {
+    const fileId = '1OA4X0aTPmGrXn7DJYYhK_BBvRcCt9MHi';
+    const video = document.getElementById('cinematicVideo');
+    video.src = `https://drive.google.com/file/d/${fileId}/preview`;
+    video.style.display = 'block';
+    document.getElementById('heroContent').style.display = 'none';
+    document.getElementById('closeVideo').style.display = 'block';
+}
+
+function closeVideo() {
+    const video = document.getElementById('cinematicVideo');
+    video.src = '';
+    video.style.display = 'none';
+    document.getElementById('heroContent').style.display = 'block';
+    document.getElementById('closeVideo').style.display = 'none';
+}
+
 console.log('Katipunan Game - Landing page loaded with authentication integration');
